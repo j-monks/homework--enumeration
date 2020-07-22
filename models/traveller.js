@@ -23,7 +23,8 @@ Traveller.prototype.calculateTotalDistanceTravelled = function () {
 };
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
-
+  const transportArray = this.journeys.map((location) => location.transport);
+  return [...new Set(transportArray)];
 };
 
 
